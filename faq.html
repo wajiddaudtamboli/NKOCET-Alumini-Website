@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* FAQ Section Styles */
+        .faq-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f7f7f7;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .faq-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+        .faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            font-size: 1.2em;
+        }
+        .faq-answer {
+            margin-top: 10px;
+            display: none;
+            color: #555;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+    </style>
+    <title>FAQ Section</title>
+</head>
+<body>
+
+<div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <!-- FAQ Item 1 -->
+    <div class="faq-item">
+        <div class="faq-question">1. How do I register for the event?</div>
+        <div class="faq-answer">You can register by clicking on the 'Register Now' button on the home page and filling out the form.</div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="faq-item">
+        <div class="faq-question">2. What information do I need to provide during registration?</div>
+        <div class="faq-answer">You’ll need to provide your name, contact information, and some additional details about yourself.</div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="faq-item">
+        <div class="faq-question">3. Can I edit my registration details after submission?</div>
+        <div class="faq-answer">Yes, you can edit your details by logging into your account and navigating to the registration section.</div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="faq-item">
+        <div class="faq-question">4. Is there a registration fee for the event?</div>
+        <div class="faq-answer">Yes, there is a nominal fee. You can find more details on the registration page.</div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="faq-item">
+        <div class="faq-question">5. How do I know if my registration was successful?</div>
+        <div class="faq-answer">You will receive a confirmation email once your registration is successful.</div>
+    </div>
+
+    <!-- FAQ Item 6 -->
+    <div class="faq-item">
+        <div class="faq-question">6. Can I register on behalf of someone else?</div>
+        <div class="faq-answer">Yes, you can, but make sure to enter their details accurately to avoid issues later.</div>
+    </div>
+
+    <!-- FAQ Item 7 -->
+    <div class="faq-item">
+        <div class="faq-question">7. How can I cancel my registration?</div>
+        <div class="faq-answer">To cancel, please contact our support team with your registration details.</div>
+    </div>
+
+    <!-- FAQ Item 8 -->
+    <div class="faq-item">
+        <div class="faq-question">8. What happens if I forget my registration details?</div>
+        <div class="faq-answer">You can retrieve your registration details by clicking the 'Forgot Details' link on the login page.</div>
+    </div>
+
+    <!-- FAQ Item 9 -->
+    <div class="faq-item">
+        <div class="faq-question">9. Are there any discounts for group registrations?</div>
+        <div class="faq-answer">Yes, we offer discounts for group registrations. Please refer to our pricing page for more details.</div>
+    </div>
+
+    <!-- FAQ Item 10 -->
+    <div class="faq-item">
+        <div class="faq-question">10. Whom should I contact if I face issues during registration?</div>
+        <div class="faq-answer">Please reach out to our support team via the contact form on our website.</div>
+    </div>
+</div>
+
+<script>
+    // JavaScript to toggle FAQ answers
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            faqItem.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
